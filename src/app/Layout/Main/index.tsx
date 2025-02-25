@@ -1,5 +1,5 @@
 const Main = () => {
-    return <div className="w-full bg-secondary">
+    return <div className="w-full bg-secondary p-8">
         main
     </div>
 }
