@@ -14,17 +14,18 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'], // Set Inter as the default sans-serif font
+        lato: ['Lato', 'sans-serif'],
       },
       fontSize: {
-        xs: ['12px', { lineHeight: '16px', letterSpacing: '0em' }],
-        sm: ['14px', { lineHeight: '20px', letterSpacing: '0em' }],
-        base: ['16px', { lineHeight: '22.4px', letterSpacing: '0em' }],
-        lg: ['18px', { lineHeight: '26px', letterSpacing: '0em' }],
-        xl: ['20px', { lineHeight: '28px', letterSpacing: '0em' }],
-        '2xl': ['22px', { lineHeight: '32px', letterSpacing: '0em' }],
-        '3xl': ['28px', { lineHeight: '36px', letterSpacing: '0em' }],
-        '4xl': ['36px', { lineHeight: '40px', letterSpacing: '0em' }],
-        '5xl': ['48px', { lineHeight: '48px', letterSpacing: '0em' }],
+        xs: ['12px', { lineHeight: '16px', letterSpacing: '0.01em' }],
+        sm: ['15px', { lineHeight: '20.01px', letterSpacing: '0.01em' }],
+        base: ['16px', { lineHeight: '22.4px', letterSpacing: '0.01em' }],
+        lg: ['17px', { lineHeight: '26px', letterSpacing: '0.01em' }],
+        xl: ['20.01px', { lineHeight: '28px' }],
+        '2xl': ['22px', { lineHeight: '32px', letterSpacing: '0.01em' }],
+        '3xl': ['28px', { lineHeight: '36px', letterSpacing: '0.01em' }],
+        '4xl': ['36px', { lineHeight: '40.01px', letterSpacing: '0.01em' }],
+        '5xl': ['48px', { lineHeight: '48px', letterSpacing: '0.01em' }],
       },
       colors: {
         primary: '#232323',
@@ -38,6 +39,7 @@ module.exports = {
           800: '#343C6A',
         },
         gray: {
+          100: '#DFEAF2',
           200: '#f5f7fa',
           300: '#E6EFF5',
           400: '#B1B1B1',

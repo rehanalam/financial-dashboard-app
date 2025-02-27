@@ -8,8 +8,8 @@ const Title = ({ size = 'lg', className, children, ...props }: TitleProps) => {
   return (
     <h1
       className={classNames(
-        'm-0 font-medium text-blue-800',
-        size === 'lg' ? 'text-3xl md:text-3xl' : 'text-2xl md:text-xl',
+        'm-0 font-semibold text-blue-800',
+        size === 'lg' ? 'text-3xl md:text-3xl' : 'text-2xl md:text-2xl',
         className
       )}
       {...props}

@@ -39,15 +39,17 @@ const transactions: Transaction[] = [
 
 const Transactions = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-5">
       <Title size="sm">Recent Transaction</Title>
       <Card>
-        <div className="space-y-4">
+        <div className="space-y-5">
           {transactions.map((tx) => (
-            <div key={tx.id} className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">{tx.icon}</div>
+            <div key={tx.id} className="flex items-center gap-4">
+              <div className="flex h-[55px] w-[55px] items-center justify-center rounded-full bg-gray-100">
+                {tx.icon}
+              </div>
               <div className="flex-1">
-                <p className="text-primary text-sm font-medium">{tx.title}</p>
+                <p className="text-primary mb-2 text-sm font-medium">{tx.title}</p>
                 <p className="text-xs font-light tracking-wider text-blue-400">{tx.date}</p>
               </div>
               <p className={`text-sm font-medium ${tx.amount < 0 ? 'text-red-700' : 'text-green-700'}`}>
