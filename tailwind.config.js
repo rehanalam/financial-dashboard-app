@@ -45,7 +45,7 @@ module.exports = {
         },
         yellow: {
           300: '#FFF5D9',
-          800: '#FFBB38',
+          700: '#FFBB38',
         },
         green: {
           300: '#DCFAF8',
@@ -53,7 +53,7 @@ module.exports = {
           800: '#16DBCC',
         },
         red: {
-          800: '#FF4B4A',
+          700: '#FF4B4A',
         },
         orange: {
           800: '#FC7900',

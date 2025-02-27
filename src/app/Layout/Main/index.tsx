@@ -1,5 +1,11 @@
+import Dashboard from '@/app/Dashboard';
+
 const Main = () => {
-  return <div className="bg-secondary w-full p-8">main</div>;
+  return (
+    <div className="bg-secondary w-full p-8">
+      <Dashboard />
+    </div>
+  );
 };
 
 export default Main;
