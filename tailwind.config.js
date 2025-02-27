@@ -27,6 +27,10 @@ module.exports = {
         '4xl': ['36px', { lineHeight: '40.01px', letterSpacing: '0.01em' }],
         '5xl': ['48px', { lineHeight: '48px', letterSpacing: '0.01em' }],
       },
+      backgroundImage: {
+        'cc-gradient': 'linear-gradient(107.38deg, #5B5A6F 2.61%, #000000 101.2%)',
+        'cc-gradient-footer': 'linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%)',
+      },
       colors: {
         primary: '#232323',
         secondary: '#f5f7fa',

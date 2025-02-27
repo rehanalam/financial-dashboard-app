@@ -11,7 +11,8 @@ interface CreditCardProps {
 
 const CreditCard: React.FC<CreditCardProps> = ({ balance, cardHolder, validThru, cardNumber, theme }) => {
   // Theme-specific styles
-  const themeStyles = theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-blue-800 border border-gray-100';
+  const themeStyles =
+    theme === 'dark' ? 'bg-gray-800 text-white bg-cc-gradient' : 'bg-white text-blue-800 border border-gray-100';
   const labelStyles = theme === 'dark' ? 'text-white' : 'text-blue-400';
   const valueStyles = theme === 'dark' ? 'text-white' : 'text-blue-800';
 
@@ -39,7 +40,7 @@ const CreditCard: React.FC<CreditCardProps> = ({ balance, cardHolder, validThru,
         </div>
 
         {/* Card Number */}
-        <div className={`-mx-6 px-6 pt-4 ${theme !== 'dark' && 'border-t-1 border-gray-100'} `}>
+        <div className={`bg-cc-gradient-footer -mx-6 px-6 pt-4 ${theme !== 'dark' && 'border-t-1 border-gray-100'} `}>
           <p className={`text-2xl font-medium ${valueStyles}`}>{cardNumber}</p>
         </div>
       </div>
