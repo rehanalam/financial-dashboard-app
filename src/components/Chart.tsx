@@ -38,6 +38,7 @@ interface IChartProps {
 
 const MockChartComponent = ({ data, settings }: IChartProps) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const chartRef = useRef<any>(null);
   // const [gradientFill, setGradientFill] = useState<CanvasGradient | undefined>(undefined); // State for gradient fill
 
