@@ -1,19 +1,16 @@
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import { BrowserRouter as Router } from "react-router-dom";
-import './App.css'
-import Layout from './app/Layout'
+import './App.css';
+import Layout from './app/Layout';
 
 function App() {
-
   return (
     <Router>
-      <div className="flex border-">
-      <Layout/>
-             
+      <div className="border- flex">
+        <Layout />
       </div>
     </Router>
-   
-  )
+  );
 }
 
-export default App
+export default App;

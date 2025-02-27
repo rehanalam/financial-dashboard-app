@@ -1,7 +1,5 @@
 const Main = () => {
-    return <div className="w-full bg-secondary p-8">
-        main
-    </div>
-}
+  return <div className="bg-secondary w-full p-8">main</div>;
+};
 
-export default Main
+export default Main;

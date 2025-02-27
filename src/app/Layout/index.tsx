@@ -1,15 +1,17 @@
-import Header from "./Header"
-import Main from "./Main"
-import Sidebar from "./Sidebar"
+import Header from './Header';
+import Main from './Main';
+import Sidebar from './Sidebar';
 
-const Layout = () => <>
-    <div className="w-full h-screen flex bg-gray-200 ">
-        <Sidebar />
-        <div className="w-full flex flex-col">
-            <Header />
-            <Main />
-        </div>
+const Layout = () => (
+  <>
+    <div className="flex h-screen w-full bg-gray-200">
+      <Sidebar />
+      <div className="flex w-full flex-col">
+        <Header />
+        <Main />
+      </div>
     </div>
-</>
+  </>
+);
 
-export default Layout
+export default Layout;
