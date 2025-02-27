@@ -12,8 +12,8 @@ const Header = () => {
   return (
     <div className="flex h-[100px] w-full items-center justify-between border-b border-gray-300 bg-white px-8">
       <Title size="lg">Overview</Title>
-      <div className="right"> </div>
-      <div className="left flex items-center gap-8">
+      <div className="left"> </div>
+      <div className="right flex items-center gap-8">
         <Input className="mb-0 min-w-64 rounded-[40px] border-0 bg-gray-200" placeholder="Search for something" />
         <Button variant="secondary" size="icon">
           <SettingsIcon />
@@ -21,7 +21,6 @@ const Header = () => {
         <Button variant="secondary" size="icon">
           <NotificationsIcon />
         </Button>
-
         <Avatar src={USER_IMAGE_URL} size="lg" />
       </div>
     </div>

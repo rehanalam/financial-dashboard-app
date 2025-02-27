@@ -4,13 +4,14 @@ interface AvatarProps {
   src?: string;
   alt?: string;
   name?: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 const sizeClasses = {
   sm: 'w-8 h-8',
   md: 'w-12 h-12',
   lg: 'w-[50px] h-[50px]',
+  xl: 'w-[70px] h-[70px]',
 };
 
 const Avatar: React.FC<AvatarProps> = ({ src, alt, name = 'User', size = 'md' }: AvatarProps) => {
