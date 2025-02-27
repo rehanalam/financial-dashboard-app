@@ -20,7 +20,7 @@ const QuickTransfer: React.FC<QuickTransferProps> = ({ users }) => {
   return (
     <div className="flex flex-col gap-5">
       <Title size="sm">Recent Transaction</Title>
-      <Card>
+      <Card className="py-8">
         <div className="mb-7 flex space-x-7">
           {users.map((user, index) => (
             <div key={index} className="flex flex-col items-center">
@@ -31,7 +31,7 @@ const QuickTransfer: React.FC<QuickTransferProps> = ({ users }) => {
           ))}
         </div>
 
-        <div className="mb-4 grid grid-cols-3 items-center justify-between">
+        <div className="mt-7 grid grid-cols-3 items-center justify-between">
           <label className="col-span-1 mb-1 block text-base font-light text-blue-400">Write Amount</label>
           <div className="col-span-2 flex">
             <Input

@@ -1,6 +1,6 @@
-import Card from '@/components/Card';
 import Title from '@/components/Title';
 
+import BalanceHistoryChart from '../BanalanceChart';
 import CreditCard from '../CreditCard';
 import QuickTransfer from '../QuickTransfer';
 import Transactions from '../Transactions';
@@ -65,7 +65,7 @@ const Dashboard = () => {
             <Title size="sm">Balance History</Title>
           </div>
           <div className="flex w-full gap-7">
-            <Card>Graph Goes here</Card>
+            <BalanceHistoryChart />
           </div>
         </div>
       </div>
