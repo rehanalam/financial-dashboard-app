@@ -7,11 +7,9 @@ function App() {
 
   return (
     <Router>
-      <div className="flex">
+      <div className="flex border-">
       <Layout/>
-              <div className="flex-1 p-5">
-         
-        </div>
+             
       </div>
     </Router>
    

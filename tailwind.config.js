@@ -8,6 +8,10 @@ module.exports = {
     ],
     theme: {
       extend: {
+        letterSpacing: {
+          wider: "0.05em", // Default 'wide' is 0.05em
+          widest: "0.12em",
+        },
         fontFamily: {
           sans: ["Inter", "sans-serif"], // Set Inter as the default sans-serif font
         },
@@ -24,12 +28,13 @@ module.exports = {
         },
         colors: {
             primary: '#232323',
-            // secondary: '#f5f7fa',
+            secondary: '#f5f7fa',
             white: '#ffffff',
             blue: {
                 100: '#E7EDFF',
-                200: '#396AFF',
-                300: '#718EBF',
+                200: '#8BA3CB',
+                300: '#396AFF',
+                400: '#718EBF',
                 800: '#343C6A',
             },
             gray: { 
