@@ -2,7 +2,6 @@ import CardIcon from '@/assets/icons/transaction-card-icon.svg?react';
 import MoneyIcon from '@/assets/icons/transaction-money-icon.svg?react';
 import PaypalIcon from '@/assets/icons/transaction-paypal-icon.svg?react';
 import Card from '@/components/Card';
-import Title from '@/components/Title';
 import React from 'react';
 
 interface Transaction {
@@ -39,27 +38,22 @@ const transactions: Transaction[] = [
 
 const Transactions = () => {
   return (
-    <div className="flex flex-col gap-5">
-      <Title size="sm">Recent Transaction</Title>
-      <Card>
-        <div className="space-y-5">
-          {transactions.map((tx) => (
-            <div key={tx.id} className="flex items-center gap-4">
-              <div className="flex h-[55px] w-[55px] items-center justify-center rounded-full bg-gray-100">
-                {tx.icon}
-              </div>
-              <div className="flex-1">
-                <p className="text-primary mb-2 text-sm font-medium">{tx.title}</p>
-                <p className="text-xs font-light tracking-wider text-blue-400">{tx.date}</p>
-              </div>
-              <p className={`text-sm font-medium ${tx.amount < 0 ? 'text-red-700' : 'text-green-700'}`}>
-                {tx.amount < 0 ? `-$${Math.abs(tx.amount)}` : `+$${tx.amount.toLocaleString()}`}
-              </p>
+    <Card>
+      <div className="space-y-5">
+        {transactions.map((tx) => (
+          <div key={tx.id} className="flex items-center gap-4">
+            <div className="flex h-[55px] w-[55px] items-center justify-center rounded-full bg-gray-100">{tx.icon}</div>
+            <div className="flex-1">
+              <p className="text-primary mb-2 text-sm font-medium">{tx.title}</p>
+              <p className="text-xs font-light tracking-wider text-blue-400">{tx.date}</p>
             </div>
-          ))}
-        </div>
-      </Card>
-    </div>
+            <p className={`text-sm font-medium ${tx.amount < 0 ? 'text-red-700' : 'text-green-700'}`}>
+              {tx.amount < 0 ? `-$${Math.abs(tx.amount)}` : `+$${tx.amount.toLocaleString()}`}
+            </p>
+          </div>
+        ))}
+      </div>
+    </Card>
   );
 };
 
