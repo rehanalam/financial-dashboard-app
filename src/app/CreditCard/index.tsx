@@ -1,6 +1,8 @@
 import Card from '@/components/Card';
 import React from 'react';
 
+import ChipCardDark from '../../assets/icons/chip-card-dark-icon.svg?react';
+import ChipCardLight from '../../assets/icons/chip-card-light-icon.svg?react';
 import MasterLogoDark from '../../assets/icons/master-cc-dark-icon.svg?react';
 import MasterLogoLight from '../../assets/icons/master-cc-light-icon.svg?react';
 
@@ -25,9 +27,12 @@ const CreditCard: React.FC<CreditCardProps> = ({ balance, cardHolder, validThru,
   return (
     <Card className={themeStyles}>
       <div className="font-lato space-y-7">
-        <div>
-          <p className={`text-sm ${labelStyles}`}>Balance</p>
-          <p className={`text-xl font-medium ${valueStyles}`}>{balance}</p>
+        <div className="flex justify-between">
+          <div className="flex flex-col">
+            <p className={`text-xs font-light ${labelStyles}`}>Balance</p>
+            <p className={`text-xl font-medium ${valueStyles}`}>{balance}</p>
+          </div>
+          {isDarkTheme ? <ChipCardLight /> : <ChipCardDark />}
         </div>
         <div className="mb-9 grid grid-cols-2">
           <div>
