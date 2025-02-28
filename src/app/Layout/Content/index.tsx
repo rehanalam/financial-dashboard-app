@@ -5,7 +5,7 @@ const Dashboard = lazy(() => import('@/pages/Dashboard'));
 const Settings = lazy(() => import('@/pages/Settings'));
 const CreditCards = lazy(() => import('@/pages/CreditCards'));
 
-const Main = () => {
+const Content = () => {
   return (
     <div className="bg-secondary w-full overflow-y-auto p-8">
       <Suspense fallback={<div>Loading...</div>}>
@@ -19,4 +19,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Content;
