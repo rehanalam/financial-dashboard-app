@@ -31,10 +31,10 @@ const WeeklyActivityChart = () => {
 
             <Tooltip
               contentStyle={{
-                backgroundColor: 'rgba(0,0,0,0.7)',
+                backgroundColor: '#E5E7EB',
                 border: 'none',
                 borderRadius: '4px',
-                color: '#fff',
+                color: '#718EBF',
               }}
             />
 

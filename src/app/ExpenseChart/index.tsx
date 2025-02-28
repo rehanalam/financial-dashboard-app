@@ -1,35 +1,58 @@
 import Card from '@/components/Card';
-import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
-import { ChartData, ChartOptions } from 'chart.js';
-import React from 'react';
-import { Pie } from 'react-chartjs-2';
+import { Cell, LabelList, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+interface PieData {
+  name: string;
+  value: number;
+  color: string;
+}
 
-const data: ChartData<'pie'> = {
-  labels: ['Entertainment', 'Investment', 'Bill Expense', 'Others'],
-  datasets: [
-    {
-      data: [30, 20, 15, 35],
-      backgroundColor: ['#343C6A', '#396AFF', '#FC7900', '#232323'],
-      borderWidth: 2,
-      borderColor: '#fff',
-    },
-  ],
+const data: PieData[] = [
+  { name: 'Entertainment', value: 35, color: '#343C6A' },
+  { name: 'Investment', value: 25, color: '#396AFF' },
+  { name: 'Bill Expense', value: 20, color: '#FC7900' },
+  { name: 'Others', value: 30, color: '#232323' },
+];
+
+const getNameByValue = (value: number): string => {
+  const entry = data.find((item) => item.value === value);
+  return entry ? entry.name : '';
 };
 
-const options: ChartOptions<'pie'> = {
-  responsive: true,
-  plugins: {
-    legend: { display: false },
-  },
-};
-
-const ExpenseChart: React.FC = () => {
+const ExpenseChart = () => {
   return (
     <Card>
-      <div className="relative flex max-h-[250px] items-center justify-center">
-        <Pie data={data} options={options} />
+      <div className="relative flex max-h-[280px] items-center justify-center">
+        <ResponsiveContainer width="100%" height={380}>
+          <PieChart>
+            <Pie data={data} dataKey="value" nameKey="name" paddingAngle={2} fill="#8884d8" stroke="#fff">
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.color} />
+              ))}
+
+              <LabelList
+                dataKey="value"
+                position="inside"
+                formatter={(value: number) => {
+                  const name = getNameByValue(value);
+                  return `${value}%\n${name}`;
+                }}
+                fill="#fff"
+                fontSize={9}
+                fontWeight="semibold"
+              />
+            </Pie>
+
+            <Tooltip
+              contentStyle={{
+                backgroundColor: '#E5E7EB',
+                border: 'none',
+                borderRadius: '4px',
+                color: '#718EBF',
+              }}
+            />
+          </PieChart>
+        </ResponsiveContainer>
       </div>
     </Card>
   );
