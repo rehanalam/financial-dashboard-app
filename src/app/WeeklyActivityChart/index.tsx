@@ -1,65 +1,47 @@
 import Card from '@/components/Card';
-import { BarElement, CategoryScale, Chart as ChartJS, ChartOptions, Legend, LinearScale, Tooltip } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
-
-// Register Chart.js components
-ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const WeeklyActivityChart = () => {
-  const data = {
-    labels: ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-    datasets: [
-      {
-        label: 'Deposit',
-        data: [200, 100, 250, 300, 150, 200, 280], // Sample deposit data
-        backgroundColor: 'blue',
-        borderRadius: 5, // Rounded corners
-      },
-      {
-        label: 'Withdraw',
-        data: [450, 320, 400, 480, 100, 420, 390], // Sample withdrawal data
-        backgroundColor: 'black',
-        borderRadius: 5,
-      },
-    ],
-  };
-
-  const options: ChartOptions<'bar'> = {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        grid: { color: '#E5E7EB' },
-      },
-      x: {
-        grid: { display: false },
-      },
-    },
-    plugins: {
-      legend: {
-        position: 'top' as const, // Explicitly defining the type
-        labels: {
-          usePointStyle: true,
-          boxWidth: 10,
-        },
-      },
-      tooltip: {
-        enabled: true,
-        backgroundColor: 'rgba(0,0,0,0.7)',
-        titleColor: '#fff',
-        bodyColor: '#fff',
-        bodyFont: { weight: 'bold' },
-        padding: 8,
-        cornerRadius: 4,
-      },
-    },
-  };
+  const data = [
+    { day: 'Sat', deposit: 200, withdraw: 450 },
+    { day: 'Sun', deposit: 100, withdraw: 320 },
+    { day: 'Mon', deposit: 250, withdraw: 400 },
+    { day: 'Tue', deposit: 300, withdraw: 480 },
+    { day: 'Wed', deposit: 150, withdraw: 100 },
+    { day: 'Thu', deposit: 200, withdraw: 420 },
+    { day: 'Fri', deposit: 280, withdraw: 390 },
+  ];
 
   return (
     <Card>
-      <div className="h-64">
-        <Bar data={data} options={options} />
+      <div className="h-72">
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data}>
+            <Legend
+              wrapperStyle={{ paddingBottom: '22px' }}
+              iconType="circle"
+              iconSize={10}
+              align="right"
+              verticalAlign="top"
+            />
+            <CartesianGrid stroke="#E5E7EB" horizontal={true} vertical={false} />
+
+            <XAxis dataKey="day" tick={{ fill: '#718EBF' }} axisLine={false} tickMargin={15} />
+            <YAxis tick={{ fill: '#718EBF' }} axisLine={false} tickMargin={15} />
+
+            <Tooltip
+              contentStyle={{
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                border: 'none',
+                borderRadius: '4px',
+                color: '#fff',
+              }}
+            />
+
+            <Bar dataKey="deposit" name="Deposit" fill="#396AFF" radius={[30, 30, 30, 30]} barSize={15} />
+            <Bar dataKey="withdraw" name="Withdraw" fill="#232323" radius={[30, 30, 30, 30]} barSize={15} />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </Card>
   );
