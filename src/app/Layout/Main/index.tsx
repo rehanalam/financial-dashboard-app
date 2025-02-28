@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 const Dashboard = lazy(() => import('@/pages/Dashboard'));
 const Settings = lazy(() => import('@/pages/Settings'));
+const CreditCards = lazy(() => import('@/pages/CreditCards'));
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/credit-cards" element={<CreditCards />} />
         </Routes>
       </Suspense>
     </div>

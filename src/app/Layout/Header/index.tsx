@@ -4,6 +4,7 @@ import Avatar from '@/components/Avatar';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import Title from '@/components/Title';
+import { Link } from 'react-router-dom';
 
 import MobileNav from '../Sidebar/mobileNav';
 
@@ -24,9 +25,11 @@ const Header = () => {
             className="mb-0 hidden min-w-64 rounded-[40px] border-0 bg-gray-200 md:flex"
             placeholder="Search for something"
           />
-          <Button variant="secondary" size="icon" className="hidden md:flex">
-            <SettingsIcon />
-          </Button>
+          <Link to="/settings">
+            <Button variant="secondary" size="icon" className="hidden md:flex">
+              <SettingsIcon />
+            </Button>
+          </Link>
           <Button variant="secondary" size="icon" className="hidden md:flex">
             <NotificationsIcon />
           </Button>

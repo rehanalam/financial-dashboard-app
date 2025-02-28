@@ -1,9 +1,8 @@
+import ChipCardDark from '@/assets/icons/chip-card-dark-icon.svg?react';
+import ChipCardLight from '@/assets/icons/chip-card-light-icon.svg?react';
+import MasterLogoDark from '@/assets/icons/master-cc-dark-icon.svg?react';
+import MasterLogoLight from '@/assets/icons/master-cc-light-icon.svg?react';
 import Card from '@/components/Card';
-
-import ChipCardDark from '../../assets/icons/chip-card-dark-icon.svg?react';
-import ChipCardLight from '../../assets/icons/chip-card-light-icon.svg?react';
-import MasterLogoDark from '../../assets/icons/master-cc-dark-icon.svg?react';
-import MasterLogoLight from '../../assets/icons/master-cc-light-icon.svg?react';
 
 interface CreditCardProps {
   balance: string;

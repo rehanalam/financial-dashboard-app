@@ -1,5 +1,6 @@
 import Title from '@/components/Title';
 import { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 
 interface GridSectionProps {
   title: string;
@@ -14,9 +15,11 @@ const GridSection = ({ title, children, colSpan, showSeeAll = false }: GridSecti
       <div className="flex items-center justify-between">
         <Title size="sm">{title}</Title>
         {showSeeAll && (
-          <Title size="sm" className="text-right !text-lg">
-            See All
-          </Title>
+          <Link to="/credit-cards">
+            <Title size="sm" className="text-right !text-lg">
+              See All
+            </Title>
+          </Link>
         )}
       </div>
       <div className="flex w-full gap-7">{children}</div>

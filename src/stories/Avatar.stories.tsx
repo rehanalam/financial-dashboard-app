@@ -28,36 +28,39 @@ const Template: StoryFn<AvatarProps> = (args: AvatarProps) => <Avatar {...args} 
 
 export const Default = Template.bind({});
 Default.args = {
+  src: 'https://xsgames.co/randomusers/assets/avatars/male/8.jpg',
   name: 'John Doe',
 };
 
 export const WithImage = Template.bind({});
 WithImage.args = {
-  src: 'https://via.placeholder.com/150',
+  src: 'https://xsgames.co/randomusers/assets/avatars/male/8.jpg',
   alt: 'User Avatar',
   name: 'John Doe',
 };
 
 export const Small = Template.bind({});
 Small.args = {
+  src: 'https://xsgames.co/randomusers/assets/avatars/male/8.jpg',
   size: 'sm',
   name: 'John Doe',
 };
 
-export const Large = Template.bind({});
-Large.args = {
+export const LargeInitials = Template.bind({});
+LargeInitials.args = {
   size: 'lg',
   name: 'John Doe',
 };
 
-export const ExtraLarge = Template.bind({});
-ExtraLarge.args = {
+export const ExtraLargeInitials = Template.bind({});
+ExtraLargeInitials.args = {
   size: 'xl',
   name: 'John Doe',
 };
 
 export const DoubleExtraLarge = Template.bind({});
 DoubleExtraLarge.args = {
+  src: 'https://xsgames.co/randomusers/assets/avatars/male/8.jpg',
   size: '2xl',
   name: 'John Doe',
 };

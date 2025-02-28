@@ -2,18 +2,18 @@
 module.exports = {
   content: [
     './index.html',
-    './src/**/*.{js,ts,jsx,tsx}', // Ensure Storybook paths are included
+    './src/**/*.{js,ts,jsx,tsx}',
     './.storybook/**/*.{js,ts,jsx,tsx}',
-    './stories/**/*.{js,ts,jsx,tsx}',
+    './.storybook/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       letterSpacing: {
-        wider: '0.05em', // Default 'wide' is 0.05em
+        wider: '0.05em',
         widest: '0.12em',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Set Inter as the default sans-serif font
+        sans: ['Inter', 'sans-serif'],
         lato: ['Lato', 'sans-serif'],
       },
       fontSize: {
