@@ -1,11 +1,11 @@
 import Card from '@/components/Card';
 
-import { TRANSATION_CONST } from './Transaction.const';
+import { TRANSATION_CONST } from './transaction.const';
 
 const Transactions = () => {
   return (
     <Card>
-      <div className="space-y-5">
+      <div className="max-h-[205px] space-y-5 overflow-y-auto">
         {TRANSATION_CONST.map((tx) => (
           <div key={tx.id} className="flex items-center gap-4">
             <div className="flex h-[55px] w-[55px] items-center justify-center rounded-full bg-gray-100">{tx.icon}</div>
