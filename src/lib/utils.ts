@@ -6,5 +6,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const maskCardNumber = (cardNumber: string) => {
-  return cardNumber.replace(/\d(?=\d{4})/g, '*');
+  if (cardNumber.length < 12) return cardNumber;
+
+  const masked = cardNumber.slice(0, 4) + ' **** **** ' + cardNumber.slice(-4);
+
+  return masked;
 };
