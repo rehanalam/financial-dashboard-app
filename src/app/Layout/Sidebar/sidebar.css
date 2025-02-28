@@ -1,0 +1,11 @@
+.sidebar-wrapper .side-nav-icon svg path,
+.sidebar-wrapper .side-nav-text {
+  fill: #b1b1b1;
+  color: #b1b1b1;
+}
+
+.sidebar-wrapper .nav-item.active .side-nav-icon svg path,
+.sidebar-wrapper .nav-item.active .side-nav-text {
+  fill: #232323;
+  color: #232323;
+}
