@@ -44,7 +44,7 @@ yarn test
 - **Vitest & React Testing Library** – Unit and integration testing
 - **Recharts** – Data visualization
 
-## Project Structure
+## Component Structure
 
 The project follows the **Atomic Design** pattern:
 
@@ -52,6 +52,17 @@ The project follows the **Atomic Design** pattern:
 - **Molecules** – Combinations of atoms, such as form fields.
 - **Organisms** – Complex UI components, such as the Profile Edit form.
 - **Templates & Pages** – Full layouts that combine organisms into complete pages.
+
+The project follows a structured **layout system** to ensure consistency and scalability.
+
+### **Project Layout**
+
+- **Main Layout:** Wraps the application with global styles and structure.
+- **Sidebar:** Provides persistent navigation for seamless access to different sections.
+- **Header:** Displays key user information and quick actions.
+- **Main Content:** Dynamically renders dashboard and settings content based on routing.
+
+This modular approach keeps the UI clean, intuitive, and easy to extend.
 
 ## Features
 
