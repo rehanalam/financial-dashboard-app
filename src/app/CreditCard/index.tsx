@@ -1,5 +1,4 @@
 import Card from '@/components/Card';
-import React from 'react';
 
 import ChipCardDark from '../../assets/icons/chip-card-dark-icon.svg?react';
 import ChipCardLight from '../../assets/icons/chip-card-light-icon.svg?react';
@@ -16,7 +15,7 @@ interface CreditCardProps {
 
 const computeTheme = (theme: string) => theme === 'dark';
 
-const CreditCard: React.FC<CreditCardProps> = ({ balance, cardHolder, validThru, cardNumber, theme }) => {
+const CreditCard = ({ balance, cardHolder, validThru, cardNumber, theme }: CreditCardProps) => {
   const isDarkTheme = computeTheme(theme);
   const themeStyles = isDarkTheme
     ? 'bg-gray-800 text-white bg-cc-gradient'

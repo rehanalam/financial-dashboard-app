@@ -3,7 +3,6 @@ import Avatar from '@/components/Avatar';
 import { Button } from '@/components/Button';
 import Card from '@/components/Card';
 import { Input } from '@/components/Input';
-import React from 'react';
 
 interface User {
   name: string;
@@ -15,7 +14,7 @@ interface QuickTransferProps {
   users: User[];
 }
 
-const QuickTransfer: React.FC<QuickTransferProps> = ({ users }) => {
+const QuickTransfer = ({ users }: QuickTransferProps) => {
   return (
     <Card className="min-h-[280px] py-8">
       <div className="mb-7 flex space-x-7">

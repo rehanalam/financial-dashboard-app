@@ -18,7 +18,6 @@ const initialState: ProfileState = {
   status: 'idle',
 };
 
-// Mocked user data
 const mockUser: User = {
   id: '123',
   name: 'John Doe',
@@ -27,21 +26,19 @@ const mockUser: User = {
   preferences: 'dark-mode',
 };
 
-// Fetch profile (mocked)
 export const fetchProfile = createAsyncThunk<User>('profile/fetchProfile', async () => {
   return new Promise<User>((resolve) => {
     setTimeout(() => {
       resolve(mockUser);
-    }, 500); // Simulate network delay
+    }, 100);
   });
 });
 
-// Update profile (mocked)
 export const updateProfile = createAsyncThunk<User, Partial<User>>('profile/updateProfile', async (userData) => {
   return new Promise<User>((resolve) => {
     setTimeout(() => {
       resolve({ ...mockUser, ...userData });
-    }, 500); // Simulate network delay
+    }, 100);
   });
 });
 

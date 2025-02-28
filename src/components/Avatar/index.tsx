@@ -1,6 +1,4 @@
-import React from 'react';
-
-interface AvatarProps {
+export interface AvatarProps {
   src?: string;
   alt?: string;
   name?: string;
@@ -15,7 +13,7 @@ const sizeClasses = {
   '2xl': 'w-[90px] h-[90px]',
 };
 
-const Avatar: React.FC<AvatarProps> = ({ src, alt, name = 'User', size = 'md' }: AvatarProps) => {
+const Avatar = ({ src, alt, name = 'User', size = 'md' }: AvatarProps) => {
   const getInitials = (name: string) => {
     return name
       .split(' ')

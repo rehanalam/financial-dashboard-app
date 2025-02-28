@@ -4,7 +4,7 @@ import { Input } from '@/components/Input';
 import Label from '@/components/Label';
 import { fetchProfile, updateProfile } from '@/redux/slices/profileSlice';
 import { AppDispatch, RootState } from '@/redux/store';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import 'react-tabs/style/react-tabs.css';
@@ -24,7 +24,7 @@ interface ProfileFormData {
   country: string;
 }
 
-const EditProfile: React.FC = () => {
+const EditProfile = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { user, status } = useSelector((state: RootState) => state.profile);
   const { register, handleSubmit, reset } = useForm<ProfileFormData>();

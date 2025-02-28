@@ -1,14 +1,14 @@
 import Title from '@/components/Title';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 interface GridSectionProps {
   title: string;
   children: ReactNode;
-  colSpan: string; // Tailwind CSS column span classes
+  colSpan: string;
   showSeeAll?: boolean;
 }
 
-const GridSection: React.FC<GridSectionProps> = ({ title, children, colSpan, showSeeAll = false }) => {
+const GridSection = ({ title, children, colSpan, showSeeAll = false }: GridSectionProps) => {
   return (
     <div className={`${colSpan} flex flex-col space-y-5`}>
       <div className="flex items-center justify-between">
