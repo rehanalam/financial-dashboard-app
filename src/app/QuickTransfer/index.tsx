@@ -1,8 +1,8 @@
 import SendMessageIcon from '@/assets/icons/send-message-icon.svg?react';
 import Avatar from '@/components/Avatar';
+import { Button } from '@/components/Button';
 import Card from '@/components/Card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Input } from '@/components/Input';
 import React from 'react';
 
 interface User {

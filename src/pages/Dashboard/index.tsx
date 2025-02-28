@@ -1,11 +1,10 @@
+import BalanceHistoryChart from '@/app/BalanceChart';
+import CreditCard from '@/app/CreditCard';
+import ExpenseChart from '@/app/ExpenseChart';
+import QuickTransfer from '@/app/QuickTransfer';
+import Transactions from '@/app/Transactions';
+import WeeklyActivityChart from '@/app/WeeklyActivityChart';
 import GridSection from '@/components/GridSection';
-
-import BalanceHistoryChart from '../BalanceChart';
-import CreditCard from '../CreditCard';
-import ExpenseChart from '../ExpenseChart';
-import QuickTransfer from '../QuickTransfer';
-import Transactions from '../Transactions';
-import WeeklyActivityChart from '../WeeklyActivityChart';
 
 const Dashboard = () => {
   const users = [
