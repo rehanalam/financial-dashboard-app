@@ -29,7 +29,7 @@ const Dashboard = () => {
     <div className="flex flex-col gap-6">
       {/* First Row */}
       <div className="grid grid-cols-1 gap-7 md:grid-cols-12">
-        <GridSection title="My Cards" colSpan="md:col-span-8" showSeeAll>
+        <GridSection title="My Cards" colSpan="md:col-span-12 xl:col-span-8" showSeeAll>
           <CreditCard
             balance="$5,756"
             cardHolder="Eddy Cusuma"
@@ -46,29 +46,29 @@ const Dashboard = () => {
           />
         </GridSection>
 
-        <GridSection title="Recent Transaction" colSpan="md:col-span-4">
+        <GridSection title="Recent Transaction" colSpan="md:col-span-12 xl:col-span-4">
           <Transactions />
         </GridSection>
       </div>
 
       {/* Second Row */}
       <div className="grid grid-cols-1 gap-7 md:grid-cols-12">
-        <GridSection title="Weekly Activity" colSpan="md:col-span-8">
+        <GridSection title="Weekly Activity" colSpan="md:col-span-12 xl:col-span-8">
           <WeeklyActivityChart />
         </GridSection>
 
-        <GridSection title="Expense Statistics" colSpan="md:col-span-4">
+        <GridSection title="Expense Statistics" colSpan="md:col-span-12 xl:col-span-4">
           <ExpenseChart />
         </GridSection>
       </div>
 
       {/* Third Row */}
       <div className="grid grid-cols-1 gap-7 md:grid-cols-10">
-        <GridSection title="Quick Transfer" colSpan="md:col-span-4">
+        <GridSection title="Quick Transfer" colSpan="md:col-span-12 xl:col-span-4">
           <QuickTransfer users={users} />
         </GridSection>
 
-        <GridSection title="Balance History" colSpan="md:col-span-6">
+        <GridSection title="Balance History" colSpan="md:col-span-12 xl:col-span-6">
           <BalanceHistoryChart />
         </GridSection>
       </div>

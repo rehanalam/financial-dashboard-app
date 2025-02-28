@@ -30,10 +30,10 @@ const QuickTransfer: React.FC<QuickTransferProps> = ({ users }) => {
 
       <div className="mt-8 grid grid-cols-3 items-center justify-between">
         <label className="col-span-1 mb-1 block text-base font-light text-blue-400">Write Amount</label>
-        <div className="col-span-2 flex">
+        <div className="col-span-2 flex justify-end">
           <Input
             defaultValue="525.50"
-            className="mb-0 rounded-[40px] border-0 bg-gray-200"
+            className="mb-0 max-w-[200px] rounded-[40px] border-0 bg-gray-200"
             placeholder="Search for something"
           />
           <Button variant="default" className="-ml-8 rounded-[40px]" size="lg">
