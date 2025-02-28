@@ -10,7 +10,7 @@ const USER_IMAGE_URL =
 
 const Header = () => {
   return (
-    <div className="flex h-[100px] w-full items-center justify-between border-b border-gray-300 bg-white px-8">
+    <div className="flex w-full items-center justify-between border-b border-gray-300 bg-white px-10 py-6">
       <Title size="lg">Overview</Title>
       <div className="left"> </div>
       <div className="right flex items-center gap-8">

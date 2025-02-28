@@ -2,8 +2,10 @@ import Title from '@/components/Title';
 
 import BalanceHistoryChart from '../BanalanceChart';
 import CreditCard from '../CreditCard';
+import ExpenseChart from '../ExpenseChart';
 import QuickTransfer from '../QuickTransfer';
 import Transactions from '../Transactions';
+import WeeklyActivityChart from '../WeeklyActivityChart';
 
 const Dashboard = () => {
   const users = [
@@ -55,10 +57,32 @@ const Dashboard = () => {
           <Transactions />
         </div>
       </div>
-
+      <div className="grid grid-cols-12 gap-7">
+        <div className="col-span-8 flex flex-col space-y-5">
+          <div className="flex items-center justify-between">
+            <Title size="sm">Weekly Activity</Title>
+          </div>
+          <div className="flex w-full gap-7">
+            <WeeklyActivityChart />
+          </div>
+        </div>
+        <div className="col-span-4 flex flex-col space-y-5">
+          <div className="flex items-center justify-between">
+            <Title size="sm">Expense Statistics</Title>
+          </div>
+          <div className="flex w-full gap-7">
+            <ExpenseChart />
+          </div>
+        </div>
+      </div>
       <div className="grid grid-cols-10 gap-7">
-        <div className="col-span-4">
-          <QuickTransfer users={users} />
+        <div className="col-span-4 flex flex-col space-y-5">
+          <div className="flex items-center justify-between">
+            <Title size="sm">Recent Transaction</Title>
+          </div>
+          <div className="flex w-full gap-7">
+            <QuickTransfer users={users} />
+          </div>
         </div>
         <div className="col-span-6 flex flex-col space-y-5">
           <div className="flex items-center justify-between">
