@@ -8,7 +8,7 @@ interface LabelProps {
 
 const Label = ({ children, className = '', htmlFor }: LabelProps) => {
   return (
-    <label htmlFor={htmlFor} className={`text-primary mb-3 block text-sm font-medium ${className}`}>
+    <label htmlFor={htmlFor} className={`text-primary mb-3 block ${className}`}>
       {children}
     </label>
   );
