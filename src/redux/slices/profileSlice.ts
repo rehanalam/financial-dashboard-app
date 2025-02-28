@@ -1,27 +1,48 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-interface User {
+export enum ProfileStatus {
+  IDLE = 'idle',
+  LOADING = 'loading',
+  FAILED = 'failed',
+  SUCCEEDED = 'succeeded',
+}
+
+export interface User {
   id: string;
   name: string;
+  username: string;
   email: string;
+  dateOfBirth: string;
+  presentAddress: string;
+  permanentAddress: string;
+  city: string;
+  postalCode: string;
+  country: string;
   password?: string;
   preferences?: string;
 }
 
-interface ProfileState {
+export interface ProfileState {
   user: User | null;
-  status: 'idle' | 'loading' | 'succeeded' | 'failed';
+  status: ProfileStatus;
 }
 
 const initialState: ProfileState = {
   user: null,
-  status: 'idle',
+  status: ProfileStatus.IDLE,
 };
 
 const mockUser: User = {
   id: '123',
   name: 'John Doe',
-  email: 'john.doe@example.com',
+  username: 'johndoe',
+  email: 'john@example.com',
+  dateOfBirth: '1990-01-01',
+  presentAddress: 'New York, USA',
+  permanentAddress: 'New York, USA',
+  city: 'New York',
+  postalCode: '10001',
+  country: 'USA',
   password: 'password123',
   preferences: 'dark-mode',
 };
@@ -49,10 +70,10 @@ const profileSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchProfile.pending, (state) => {
-        state.status = 'loading';
+        state.status = ProfileStatus.LOADING;
       })
       .addCase(fetchProfile.fulfilled, (state, action: PayloadAction<User>) => {
-        state.status = 'succeeded';
+        state.status = ProfileStatus.SUCCEEDED;
         state.user = action.payload;
       })
       .addCase(updateProfile.fulfilled, (state, action: PayloadAction<User>) => {

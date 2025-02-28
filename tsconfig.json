@@ -4,6 +4,7 @@
 
   "compilerOptions": {
     "baseUrl": ".",
+    "types": ["vitest", "node"],
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],

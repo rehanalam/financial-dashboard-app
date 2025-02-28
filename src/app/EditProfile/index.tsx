@@ -11,7 +11,7 @@ import 'react-tabs/style/react-tabs.css';
 
 import { USER_IMAGE_URL } from '../Layout/Header';
 
-interface ProfileFormData {
+export interface ProfileFormData {
   name: string;
   username: string;
   email: string;
@@ -65,44 +65,44 @@ const EditProfile = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
             <div>
-              <Label>Your Name</Label>
-              <Input type="text" {...register('name')} className="w-full" />
+              <Label htmlFor="name">Your Name</Label>
+              <Input id="name" type="text" {...register('name')} className="w-full" />
             </div>
             <div>
-              <Label>User Name</Label>
-              <Input type="text" {...register('username')} className="w-full" />
+              <Label htmlFor="username">User Name</Label>
+              <Input id="username" type="text" {...register('username')} className="w-full" />
             </div>
             <div>
-              <Label>Email</Label>
-              <Input type="email" {...register('email')} className="w-full" />
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" type="email" {...register('email')} className="w-full" />
             </div>
             <div>
-              <Label>Password</Label>
-              <Input type="password" {...register('password')} className="w-full" />
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" type="password" {...register('password')} className="w-full" />
             </div>
             <div>
-              <Label>Date of Birth</Label>
-              <Input type="date" {...register('dateOfBirth')} className="w-full" />
+              <Label htmlFor="dateOfBirth">Date of Birth</Label>
+              <Input id="dateOfBirth" type="date" {...register('dateOfBirth')} className="w-full" />
             </div>
             <div>
-              <Label>Present Address</Label>
-              <Input type="text" {...register('presentAddress')} className="w-full" />
+              <Label htmlFor="presentAddress">Present Address</Label>
+              <Input id="presentAddress" type="text" {...register('presentAddress')} className="w-full" />
             </div>
             <div>
-              <Label>Permanent Address</Label>
-              <Input type="text" {...register('permanentAddress')} className="w-full" />
+              <Label htmlFor="permanentAddress">Permanent Address</Label>
+              <Input id="permanentAddress" type="text" {...register('permanentAddress')} className="w-full" />
             </div>
             <div>
-              <Label>City</Label>
-              <Input type="text" {...register('city')} className="w-full" />
+              <Label htmlFor="city">City</Label>
+              <Input id="city" type="text" {...register('city')} className="w-full" />
             </div>
             <div>
-              <Label>Postal Code</Label>
-              <Input type="text" {...register('postalCode')} className="w-full" />
+              <Label htmlFor="postalCode">Postal Code</Label>
+              <Input id="postalCode" type="text" {...register('postalCode')} className="w-full" />
             </div>
             <div>
-              <Label>Country</Label>
-              <Input type="text" {...register('country')} className="w-full" />
+              <Label htmlFor="country">Country</Label>
+              <Input id="country" type="text" {...register('country')} className="w-full" />
             </div>
           </div>
           <Button type="submit" className="float-right w-full md:w-[190px]" variant="default" size="lg">
