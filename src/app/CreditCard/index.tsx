@@ -25,29 +25,22 @@ const CreditCard: React.FC<CreditCardProps> = ({ balance, cardHolder, validThru,
   return (
     <Card className={themeStyles}>
       <div className="font-lato space-y-7">
-        {/* Balance */}
         <div>
           <p className={`text-sm ${labelStyles}`}>Balance</p>
           <p className={`text-xl font-medium ${valueStyles}`}>{balance}</p>
         </div>
-
         <div className="mb-9 grid grid-cols-2">
-          {/* Card Holder */}
           <div>
             <p className={`text-xs font-light ${labelStyles}`}>CARD HOLDER</p>
             <p className={`text-lg font-medium ${valueStyles}`}>{cardHolder}</p>
           </div>
-
-          {/* Valid Thru */}
           <div>
             <p className={`text-xs font-light ${labelStyles}`}>VALID THRU</p>
             <p className={`text-lg font-medium ${valueStyles}`}>{validThru}</p>
           </div>
         </div>
-
-        {/* Card Number */}
         <div
-          className={`bg-cc-gradient-footer -mx-6 flex justify-between px-6 pt-5 ${!isDarkTheme && 'border-t-1 border-gray-100'} `}
+          className={`bg-cc-gradient-footer -mx-6 flex justify-between px-6 pt-5 ${!isDarkTheme && 'border-t-1 border-gray-100'}`}
         >
           <p className={`text-2xl font-medium ${valueStyles}`}>{cardNumber}</p>
           {isDarkTheme ? <MasterLogoLight /> : <MasterLogoDark />}

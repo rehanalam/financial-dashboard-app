@@ -1,6 +1,6 @@
 import GridSection from '@/components/GridSection';
 
-import BalanceHistoryChart from '../BanalanceChart';
+import BalanceHistoryChart from '../BalanceChart';
 import CreditCard from '../CreditCard';
 import ExpenseChart from '../ExpenseChart';
 import QuickTransfer from '../QuickTransfer';
