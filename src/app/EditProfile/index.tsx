@@ -1,9 +1,15 @@
+import Avatar from '@/components/Avatar';
+import { Button } from '@/components/Button';
+import { Input } from '@/components/Input';
+import Label from '@/components/Label';
 import { fetchProfile, updateProfile } from '@/redux/slices/profileSlice';
 import { AppDispatch, RootState } from '@/redux/store';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import 'react-tabs/style/react-tabs.css';
+
+import { USER_IMAGE_URL } from '../Layout/Header';
 
 interface ProfileFormData {
   name: string;
@@ -51,53 +57,60 @@ const EditProfile: React.FC = () => {
   if (status === 'failed') return <div>Error loading profile</div>;
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Your Name</label>
-          <input type="text" {...register('name')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">User Name</label>
-          <input type="text" {...register('username')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" {...register('email')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Password</label>
-          <input type="password" {...register('password')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Date of Birth</label>
-          <input type="date" {...register('dateOfBirth')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Present Address</label>
-          <input type="text" {...register('presentAddress')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Permanent Address</label>
-          <input type="text" {...register('permanentAddress')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">City</label>
-          <input type="text" {...register('city')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Postal Code</label>
-          <input type="text" {...register('postalCode')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Country</label>
-          <input type="text" {...register('country')} className="mt-1 block w-full rounded-md border p-2" />
-        </div>
+    <div className="mt-10 flex w-full gap-10">
+      <div>
+        <Avatar src={USER_IMAGE_URL} size="2xl" />
       </div>
-      <button type="submit" className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
-        Save
-      </button>
-    </form>
+      <div className="w-full">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
+            <div>
+              <Label>Your Name</Label>
+              <Input type="text" {...register('name')} className="w-full" />
+            </div>
+            <div>
+              <Label>User Name</Label>
+              <Input type="text" {...register('username')} className="w-full" />
+            </div>
+            <div>
+              <Label>Email</Label>
+              <Input type="email" {...register('email')} className="w-full" />
+            </div>
+            <div>
+              <Label>Password</Label>
+              <Input type="password" {...register('password')} className="w-full" />
+            </div>
+            <div>
+              <Label>Date of Birth</Label>
+              <Input type="date" {...register('dateOfBirth')} className="w-full" />
+            </div>
+            <div>
+              <Label>Present Address</Label>
+              <Input type="text" {...register('presentAddress')} className="w-full" />
+            </div>
+            <div>
+              <Label>Permanent Address</Label>
+              <Input type="text" {...register('permanentAddress')} className="w-full" />
+            </div>
+            <div>
+              <Label>City</Label>
+              <Input type="text" {...register('city')} className="w-full" />
+            </div>
+            <div>
+              <Label>Postal Code</Label>
+              <Input type="text" {...register('postalCode')} className="w-full" />
+            </div>
+            <div>
+              <Label>Country</Label>
+              <Input type="text" {...register('country')} className="w-full" />
+            </div>
+          </div>
+          <Button type="submit" className="float-right w-[190px]" variant="default" size="lg">
+            Save
+          </Button>
+        </form>
+      </div>
+    </div>
   );
 };
 
