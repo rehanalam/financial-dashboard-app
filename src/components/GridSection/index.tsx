@@ -16,7 +16,7 @@ const GridSection = ({ title, children, colSpan, showSeeAll = false }: GridSecti
         <Title size="sm">{title}</Title>
         {showSeeAll && (
           <Link to="/credit-cards">
-            <Title size="sm" className="text-right !text-lg">
+            <Title size="sm" className="text-right !text-lg !font-[400] hover:text-blue-800/80">
               See All
             </Title>
           </Link>
