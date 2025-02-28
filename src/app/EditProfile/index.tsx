@@ -57,7 +57,7 @@ const EditProfile: React.FC = () => {
   if (status === 'failed') return <div>Error loading profile</div>;
 
   return (
-    <div className="mt-10 flex w-full gap-10">
+    <div className="mt-10 flex w-full flex-col items-center gap-10 md:flex-row md:items-start">
       <div>
         <Avatar src={USER_IMAGE_URL} size="2xl" />
       </div>
@@ -105,7 +105,7 @@ const EditProfile: React.FC = () => {
               <Input type="text" {...register('country')} className="w-full" />
             </div>
           </div>
-          <Button type="submit" className="float-right w-[190px]" variant="default" size="lg">
+          <Button type="submit" className="float-right w-full md:w-[190px]" variant="default" size="lg">
             Save
           </Button>
         </form>
