@@ -1,3 +1,5 @@
+import { maskCardNumber } from '@/lib/utils';
+
 export interface User {
   name: string;
   role: string;
@@ -30,19 +32,19 @@ export const USERS_CONST: User[] = [
   },
 ];
 
-export const CREDI_CARD_CONST: CreditCardProps[] = [
+export const CREDIT_CARD_CONST: CreditCardProps[] = [
   {
     balance: '$5,756',
     cardHolder: 'Eddy Cusuma',
     validThru: '12/22',
-    cardNumber: '3778 **** **** 1234',
+    cardNumber: maskCardNumber('3778123412341234'),
     theme: 'dark',
   },
   {
     balance: '$5,756',
     cardHolder: 'Eddy Cusuma',
     validThru: '12/22',
-    cardNumber: '3778 **** **** 1234',
+    cardNumber: maskCardNumber('3778123412341234'),
     theme: 'light',
   },
 ];

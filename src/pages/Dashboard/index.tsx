@@ -6,7 +6,7 @@ import Transactions from '@/app/Transactions';
 import WeeklyActivityChart from '@/app/WeeklyActivityChart';
 import GridSection from '@/components/GridSection';
 
-import { CREDI_CARD_CONST, USERS_CONST } from './dashboard.const';
+import { CREDIT_CARD_CONST, USERS_CONST } from './dashboard.const';
 
 const Dashboard = () => {
   return (
@@ -15,7 +15,7 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 gap-7 md:grid-cols-12">
         <GridSection title="My Cards" colSpan="md:col-span-12 xl:col-span-8 " showSeeAll>
           <div className="flex w-full flex-col gap-7 md:flex-row md:gap-7">
-            {CREDI_CARD_CONST.map((card, index) => (
+            {CREDIT_CARD_CONST.map((card, index) => (
               <CreditCard key={index} {...card} />
             ))}
           </div>
