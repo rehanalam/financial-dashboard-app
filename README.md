@@ -6,7 +6,7 @@ The **Financial Dashboard App** is a modern and responsive web application desig
 
 ## Vercel Deployed Link
 
-[financial-dashboard-app-steel.vercel.app](https://financial-dashboard-app-steel.vercel.app/)
+[Click Here](https://financial-dashboard-app-steel.vercel.app/)
 
 ## Getting Started:
 
