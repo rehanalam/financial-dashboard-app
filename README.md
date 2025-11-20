@@ -1,6 +1,6 @@
 # Financial Dashboard App
 
-## Introduction
+## Introduction:
 
 The **Financial Dashboard App** is a modern and responsive web application designed to provide an overview of financial activities, card details, transactions, statistics, and user settings. The app follows the **Atomic Design methodology**, ensuring reusable and scalable UI components.
 
