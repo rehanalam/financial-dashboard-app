@@ -18,7 +18,7 @@ To set up the project locally, follow these steps:
 yarn install
 ```
 
-### Running the Ap
+### Running the App
 
 ```sh
 yarn dev
