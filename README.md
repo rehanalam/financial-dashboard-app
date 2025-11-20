@@ -10,7 +10,7 @@ The **Financial Dashboard App** is a modern and responsive web application desig
 
 ## Getting Started
 
-### Installation
+### Installation:
 
 To set up the project locally, follow these steps:
 
