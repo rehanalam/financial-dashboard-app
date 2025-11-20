@@ -36,7 +36,7 @@ yarn storybook
 yarn test
 ```
 
-## Tech Stack:
+## Tech Stack
 
 - **React 19** – Modern UI development
 - **Vite** – Fast build tooling
